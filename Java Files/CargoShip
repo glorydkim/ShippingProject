@@ -1,0 +1,40 @@
+import java.util.Scanner;
+
+public class CargoShip extends Ship {
+
+	//Weight of ship's cargo
+	double cargoWeight = 0;
+	//Volume of ship's cargo
+	double cargoVolume = 0;
+	//Value of ship' cargo
+	double cargoValue = 0;
+
+	/**
+	 * Constructor for class CargoShip to initialize a new Cargoship
+	 * 
+	 * @param sc
+	 *            Scanner object
+	 */
+	public CargoShip(Scanner sc) {
+		// Assign name and index using, and other default attributes
+		//using parent class constructor
+		super(sc);
+		// Cargo Weight input
+		if (sc.hasNextDouble())
+			cargoWeight = sc.nextDouble();
+		// Cargo Volume input
+		if (sc.hasNextDouble())
+			cargoVolume = sc.nextDouble();
+		// Cargo Value input
+		if (sc.hasNextDouble())
+			cargoValue = sc.nextDouble();
+	} // end random ship constructor
+
+	/**
+	 * Implementing toString() method for CargoShip class
+	 */
+	public String toString() {
+		return "Cargo Ship:   " + super.toString();
+	} // end method toFileString
+
+}
